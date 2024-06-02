@@ -16,10 +16,15 @@ p {
   margin-top: 15px;
 }
 
+.greetings {
+  text-align: center;
+  font-size: 48px;
+}
+
 .aboutme-section {
   margin: 0 auto;
-  border: 3px darkblue solid;
   border-radius: 15px;
+  background: white;
 }
 .aboutme-section.disabled {
   display: none;
@@ -40,14 +45,14 @@ p {
   }
   100% {
     width: 1200px;
-    height: 500px;
+    height: 400px;
   }
 }
 .aboutme-section.inactive {
   display: flex;
   gap: 5px;
   width: 1200px;
-  height: 500px;
+  height: 400px;
   animation: 1.4s aboutmeClose;
   animation-fill-mode: forwards;
   overflow: hidden;
@@ -55,7 +60,7 @@ p {
 @keyframes aboutmeClose {
   0% {
     width: 1200px;
-    height: 500px;
+    height: 400px;
   }
   100% {
     width: 0px;
@@ -82,7 +87,6 @@ p {
 
 .skills-section {
   margin: 0 auto;
-  border: 3px darkblue solid;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -103,19 +107,19 @@ p {
   }
   100% {
     width: 500px;
-    height: 500px;
+    height: 400px;
   }
 }
 .skills-section.inactive {
   width: 500px;
-  height: 500px;
+  height: 400px;
   animation: 1.4s skillClose;
   animation-fill-mode: forwards;
 }
 @keyframes skillClose {
   0% {
     width: 500px;
-    height: 500px;
+    height: 400px;
   }
   100% {
     width: 0px;

@@ -1,6 +1,5 @@
 .skills-section {
   margin: 0 auto;
-  border: 3px darkblue solid;
   border-radius: 15px;
   overflow: hidden;
 
@@ -23,20 +22,20 @@
 
       100% {
         width: 500px;
-        height: 500px;
+        height: 400px;
       }
     }
   }
   &.inactive {
     width: 500px;
-    height: 500px;
+    height: 400px;
     animation: 1.4s skillClose;
     animation-fill-mode: forwards;
 
     @keyframes skillClose {
       0% {
         width: 500px;
-        height: 500px;
+        height: 400px;
       }
       100% {
         width: 0px;

@@ -1,7 +1,7 @@
 .aboutme-section {
   margin: 0 auto;
-  border: 3px darkblue solid;
   border-radius: 15px;
+  background: white;
 
   &.disabled {
     display: none;
@@ -24,7 +24,7 @@
 
       100% {
         width: 1200px;
-        height: 500px;
+        height: 400px;
       }
     }
   }
@@ -32,7 +32,7 @@
     display: flex;
     gap: 5px;
     width: 1200px;
-    height: 500px;
+    height: 400px;
     animation: 1.4s aboutmeClose;
     animation-fill-mode: forwards;
     overflow: hidden;
@@ -40,7 +40,7 @@
     @keyframes aboutmeClose {
       0% {
         width: 1200px;
-        height: 500px;
+        height: 400px;
       }
       100% {
         width: 0px;
