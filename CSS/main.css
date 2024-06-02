@@ -1,0 +1,144 @@
+body {
+  padding: 0;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.aboutme-section {
+  margin: 0 auto;
+  border: 3px darkblue solid;
+  border-radius: 15px;
+}
+.aboutme-section.disabled {
+  display: none;
+}
+.aboutme-section.active {
+  display: flex;
+  gap: 5px;
+  width: 0px;
+  height: 0px;
+  animation: 1.4s aboutmeSlide;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+@keyframes aboutmeSlide {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 1200px;
+    height: 500px;
+  }
+}
+.aboutme-section.inactive {
+  display: flex;
+  gap: 5px;
+  width: 1200px;
+  height: 500px;
+  animation: 1.4s aboutmeClose;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+@keyframes aboutmeClose {
+  0% {
+    width: 1200px;
+    height: 500px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.skills-section {
+  margin: 0 auto;
+  border: 3px darkblue solid;
+  border-radius: 15px;
+}
+.skills-section.disabled {
+  display: none;
+}
+.skills-section.active {
+  width: 0px;
+  height: 0px;
+  animation: 1.4s skillSlide;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes skillSlide {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+  }
+}
+.skills-section.inactive {
+  width: 500px;
+  height: 500px;
+  animation: 1.4s skillClose;
+  animation-fill-mode: forwards;
+}
+@keyframes skillClose {
+  0% {
+    width: 500px;
+    height: 500px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.aboutme-title {
+  width: 200px;
+  align-content: center;
+  text-align: center;
+}
+
+.aboutme-text {
+  width: 980px;
+  align-content: center;
+  text-align: justify;
+  padding: 0px 10px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-top: 15px;
+}
+
+.button {
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 15px;
+  padding: 0 10px;
+  background: #5aa7ec;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+.button.active {
+  transition: 0.4s;
+  background: white;
+  color: #5aa7ec;
+  border: 3px #1b3481 solid;
+}
+.button:hover {
+  transition: 0.4s;
+  background: white;
+  color: #5aa7ec;
+  border: 3px #1b3481 solid;
+}/*# sourceMappingURL=main.css.map */
