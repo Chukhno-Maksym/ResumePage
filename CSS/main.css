@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0 auto;
@@ -6,6 +10,10 @@ body {
 p {
   margin: 0;
   padding: 0;
+}
+
+.margin-top {
+  margin-top: 15px;
 }
 
 .aboutme-section {
@@ -101,12 +109,16 @@ p {
   width: 200px;
   align-content: center;
   text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 
 .aboutme-text {
   width: 980px;
   align-content: center;
   text-align: justify;
+  font-size: 20px;
+  font-family: sans-serif;
   padding: 0px 10px;
 }
 
