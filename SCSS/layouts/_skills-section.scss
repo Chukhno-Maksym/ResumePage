@@ -1,0 +1,238 @@
+.skills-section {
+  margin: 0 auto;
+  border: 3px darkblue solid;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &.disabled {
+    display: none;
+  }
+
+  &.active {
+    width: 0px;
+    height: 0px;
+    animation: 1.4s skillSlide;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes skillSlide {
+      0% {
+        width: 0px;
+        height: 0px;
+      }
+
+      100% {
+        width: 500px;
+        height: 500px;
+      }
+    }
+  }
+  &.inactive {
+    width: 500px;
+    height: 500px;
+    animation: 1.4s skillClose;
+    animation-fill-mode: forwards;
+
+    @keyframes skillClose {
+      0% {
+        width: 500px;
+        height: 500px;
+      }
+      100% {
+        width: 0px;
+        height: 0px;
+      }
+    }
+  }
+
+  //Text
+
+  &__skill-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 420px;
+  }
+
+  &__skill-name {
+    display: flex;
+    gap: 5px;
+    justify-content: right;
+  }
+
+  &__skill-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+  }
+
+  &__animation-container {
+    width: 200px;
+    height: 7px;
+    border: 2px solid #404cf7;
+    border-radius: 25px;
+
+    // Soft Skills
+    &__animation-stress {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.4s slideStress;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideStress {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 50%;
+        }
+      }
+    }
+
+    &__animation-communication {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.4s slideCommunication;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideCommunication {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 99%;
+        }
+      }
+    }
+
+    &__animation-leadership {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideLeadership;
+      animation-delay: 1.8s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideLeadership {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 75%;
+        }
+      }
+    }
+
+    &__animation-adaptivity {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideAdaptivity;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideAdaptivity {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 90%;
+        }
+      }
+    }
+
+    // Hard Skills
+    &__animation-hmtl {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideHmtl;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideHmtl {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 80%;
+        }
+      }
+    }
+
+    &__animation-css {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideCss;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideCss {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 80%;
+        }
+      }
+    }
+
+    &__animation-scss {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideScss;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideScss {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 75%;
+        }
+      }
+    }
+
+    &__animation-adaptiv {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideAdaptiv;
+      animation-delay: 1.6s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideAdaptiv {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 95%;
+        }
+      }
+    }
+  }
+}

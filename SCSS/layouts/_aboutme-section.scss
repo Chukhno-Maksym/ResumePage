@@ -50,53 +50,6 @@
   }
 }
 
-.skills-section {
-  margin: 0 auto;
-  border: 3px darkblue solid;
-  border-radius: 15px;
-
-  &.disabled {
-    display: none;
-  }
-
-  &.active {
-    width: 0px;
-    height: 0px;
-    animation: 1.4s skillSlide;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-
-    @keyframes skillSlide {
-      0% {
-        width: 0px;
-        height: 0px;
-      }
-
-      100% {
-        width: 500px;
-        height: 500px;
-      }
-    }
-  }
-  &.inactive {
-    width: 500px;
-    height: 500px;
-    animation: 1.4s skillClose;
-    animation-fill-mode: forwards;
-
-    @keyframes skillClose {
-      0% {
-        width: 500px;
-        height: 500px;
-      }
-      100% {
-        width: 0px;
-        height: 0px;
-      }
-    }
-  }
-}
-
 .aboutme-title {
   width: 200px;
   align-content: center;
