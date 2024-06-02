@@ -1,0 +1,48 @@
+.portfolio-section {
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &.disabled {
+    display: none;
+  }
+
+  &.active {
+    width: 0px;
+    height: 0px;
+    animation: 1.4s portfolioSlide;
+    // animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid black;
+
+    @keyframes portfolioSlide {
+      0% {
+        width: 0px;
+        height: 0px;
+      }
+
+      100% {
+        width: 500px;
+        height: 400px;
+      }
+    }
+  }
+  &.inactive {
+    width: 500px;
+    height: 400px;
+    animation: 1.4s portfolioClose;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+
+    @keyframes portfolioClose {
+      0% {
+        width: 500px;
+        height: 400px;
+      }
+      100% {
+        width: 0px;
+        height: 0px;
+      }
+    }
+  }
+}

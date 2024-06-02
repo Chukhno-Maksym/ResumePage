@@ -5,6 +5,10 @@
 body {
   padding: 0;
   margin: 0 auto;
+  align-content: center;
+  background: linear-gradient(45deg, white 85%, #404cf7 85.1%);
+  height: 100vh;
+  overflow: hidden;
 }
 
 p {
@@ -85,6 +89,92 @@ p {
   padding: 0px 10px;
 }
 
+.contacts-section {
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.contacts-section.disabled {
+  display: none;
+}
+.contacts-section.active {
+  width: 0px;
+  height: 0px;
+  animation: 1.4s contactsSlide;
+  animation-fill-mode: forwards;
+  border: 1px solid black;
+}
+@keyframes contactsSlide {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 1200px;
+    height: 600px;
+  }
+}
+.contacts-section.inactive {
+  width: 500px;
+  height: 400px;
+  animation: 1.4s contactsClose;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+@keyframes contactsClose {
+  0% {
+    width: 1200px;
+    height: 600px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.portfolio-section {
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.portfolio-section.disabled {
+  display: none;
+}
+.portfolio-section.active {
+  width: 0px;
+  height: 0px;
+  animation: 1.4s portfolioSlide;
+  animation-fill-mode: forwards;
+  border: 1px solid black;
+}
+@keyframes portfolioSlide {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 500px;
+    height: 400px;
+  }
+}
+.portfolio-section.inactive {
+  width: 500px;
+  height: 400px;
+  animation: 1.4s portfolioClose;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+@keyframes portfolioClose {
+  0% {
+    width: 500px;
+    height: 400px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
 .skills-section {
   margin: 0 auto;
   border-radius: 15px;
@@ -97,7 +187,6 @@ p {
   width: 0px;
   height: 0px;
   animation: 1.4s skillSlide;
-  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 @keyframes skillSlide {
@@ -115,6 +204,7 @@ p {
   height: 400px;
   animation: 1.4s skillClose;
   animation-fill-mode: forwards;
+  overflow: hidden;
 }
 @keyframes skillClose {
   0% {
@@ -147,13 +237,13 @@ p {
   width: 200px;
   height: 7px;
   border: 2px solid #404cf7;
+  animation-delay: 1.9s;
   border-radius: 25px;
 }
 .skills-section__animation-container__animation-stress {
   height: 3px;
   border-radius: 25px;
   animation: 1.4s slideStress;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -170,7 +260,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.4s slideCommunication;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -187,7 +276,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideLeadership;
-  animation-delay: 1.8s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -204,7 +292,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideAdaptivity;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -221,7 +308,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideHmtl;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -238,7 +324,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideCss;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -255,7 +340,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideScss;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -272,7 +356,6 @@ p {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideAdaptiv;
-  animation-delay: 1.6s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   background: #404cf7;
@@ -301,7 +384,7 @@ p {
   border: none;
   border-radius: 15px;
   padding: 0 10px;
-  background: #5aa7ec;
+  background: #404cf7;
   color: white;
   cursor: pointer;
   font-size: 24px;
@@ -309,12 +392,10 @@ p {
 .button.active {
   transition: 0.4s;
   background: white;
-  color: #5aa7ec;
-  border: 3px #1b3481 solid;
+  color: #404cf7;
 }
 .button:hover {
   transition: 0.4s;
   background: white;
-  color: #5aa7ec;
-  border: 3px #1b3481 solid;
+  color: #404cf7;
 }/*# sourceMappingURL=main.css.map */

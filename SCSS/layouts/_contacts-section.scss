@@ -1,0 +1,48 @@
+.contacts-section {
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &.disabled {
+    display: none;
+  }
+
+  &.active {
+    width: 0px;
+    height: 0px;
+    animation: 1.4s contactsSlide;
+    // animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid black;
+
+    @keyframes contactsSlide {
+      0% {
+        width: 0px;
+        height: 0px;
+      }
+
+      100% {
+        width: 1200px;
+        height: 600px;
+      }
+    }
+  }
+  &.inactive {
+    width: 500px;
+    height: 400px;
+    animation: 1.4s contactsClose;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+
+    @keyframes contactsClose {
+      0% {
+        width: 1200px;
+        height: 600px;
+      }
+      100% {
+        width: 0px;
+        height: 0px;
+      }
+    }
+  }
+}
