@@ -38,6 +38,7 @@ p {
   gap: 5px;
   width: 0px;
   height: 0px;
+  transition: 0.4s;
   animation: 1.4s aboutmeSlide;
   animation-fill-mode: forwards;
   overflow: hidden;
@@ -195,7 +196,7 @@ p {
     height: 0px;
   }
   100% {
-    width: 500px;
+    width: 1200px;
     height: 400px;
   }
 }
@@ -208,7 +209,7 @@ p {
 }
 @keyframes skillClose {
   0% {
-    width: 500px;
+    width: 1200px;
     height: 400px;
   }
   100% {
@@ -222,16 +223,11 @@ p {
   margin: 0;
   width: 420px;
 }
-.skills-section__skill-name {
+.skills-section__skill-type {
   display: flex;
   gap: 5px;
   justify-content: right;
-}
-.skills-section__skill-value {
-  display: flex;
   align-items: center;
-  gap: 10px;
-  width: 250px;
 }
 .skills-section__animation-container {
   width: 200px;
@@ -366,6 +362,70 @@ p {
   }
   100% {
     width: 95%;
+  }
+}
+.skills-section__animation-container__animation-js {
+  height: 3px;
+  border-radius: 25px;
+  animation: 1.5s slideJs;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  background: #404cf7;
+}
+@keyframes slideJs {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.skills-section__animation-container__animation-webpack {
+  height: 3px;
+  border-radius: 25px;
+  animation: 1.5s slideWebpack;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  background: #404cf7;
+}
+@keyframes slideWebpack {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.skills-section__animation-container__animation-nodejs {
+  height: 3px;
+  border-radius: 25px;
+  animation: 1.5s slideNodejs;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  background: #404cf7;
+}
+@keyframes slideNodejs {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.skills-section__animation-container__animation-react {
+  height: 3px;
+  border-radius: 25px;
+  animation: 1.5s slideReact;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  background: #404cf7;
+}
+@keyframes slideReact {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
   }
 }
 

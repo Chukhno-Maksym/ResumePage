@@ -11,7 +11,6 @@
     width: 0px;
     height: 0px;
     animation: 1.4s skillSlide;
-    // animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
     @keyframes skillSlide {
@@ -21,7 +20,7 @@
       }
 
       100% {
-        width: 500px;
+        width: 1200px;
         height: 400px;
       }
     }
@@ -35,7 +34,7 @@
 
     @keyframes skillClose {
       0% {
-        width: 500px;
+        width: 1200px;
         height: 400px;
       }
       100% {
@@ -54,17 +53,11 @@
     width: 420px;
   }
 
-  &__skill-name {
+  &__skill-type {
     display: flex;
     gap: 5px;
     justify-content: right;
-  }
-
-  &__skill-value {
-    display: flex;
     align-items: center;
-    gap: 10px;
-    width: 250px;
   }
 
   &__animation-container {
@@ -224,6 +217,82 @@
 
         100% {
           width: 95%;
+        }
+      }
+    }
+
+    &__animation-js {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideJs;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideJs {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 60%;
+        }
+      }
+    }
+
+    &__animation-webpack {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideWebpack;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideWebpack {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 40%;
+        }
+      }
+    }
+
+    &__animation-nodejs {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideNodejs;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideNodejs {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 40%;
+        }
+      }
+    }
+
+    &__animation-react {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideReact;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideReact {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 30%;
         }
       }
     }
