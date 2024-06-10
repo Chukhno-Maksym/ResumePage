@@ -10,6 +10,8 @@ body {
   height: 100vh;
   overflow: hidden;
   font-size: 18px;
+  font-family: Manrope, sans-serif;
+  line-height: 1.5;
 }
 
 p {
@@ -19,6 +21,16 @@ p {
 
 .margin-top {
   margin-top: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -60,7 +72,7 @@ li {
   width: 0px;
   height: 0px;
   transition: 0.4s;
-  animation: 1.4s aboutmeSlide;
+  animation: 1.9s aboutmeSlide;
   animation-fill-mode: forwards;
   overflow: hidden;
 }
@@ -70,8 +82,9 @@ li {
     height: 0px;
   }
   100% {
-    width: 1200px;
-    height: 400px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
   }
 }
 .aboutme-section.inactive {
@@ -98,17 +111,16 @@ li {
   width: 200px;
   align-content: center;
   text-align: center;
-  font-family: sans-serif;
   text-transform: uppercase;
 }
 
 .aboutme-text {
-  width: 980px;
+  width: 880px;
   align-content: center;
   text-align: justify;
   font-size: 20px;
-  font-family: sans-serif;
   padding: 0px 10px;
+  margin-top: 10px;
 }
 
 .contacts-section {
@@ -174,13 +186,15 @@ li {
   width: 500px;
   border-radius: 10px;
   margin-bottom: 10px;
+  padding-left: 15px;
 }
 
 textarea {
   height: 300px;
   width: 500px;
   border-radius: 25px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   resize: none;
   overflow: hidden;
 }
@@ -198,7 +212,6 @@ textarea {
   height: 0px;
   animation: 1.4s portfolioSlide;
   animation-fill-mode: forwards;
-  border: 1px solid black;
 }
 @keyframes portfolioSlide {
   0% {
@@ -422,7 +435,7 @@ textarea {
     width: 75%;
   }
 }
-.skills-section__animation-container__animation-adaptiv {
+.skills-section__animation-container__adaptive-layout {
   height: 3px;
   border-radius: 25px;
   animation: 1.5s slideAdaptiv;
@@ -532,4 +545,8 @@ textarea {
   transition: 0.4s;
   background: white;
   color: #404cf7;
+}
+
+.cv-button {
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */

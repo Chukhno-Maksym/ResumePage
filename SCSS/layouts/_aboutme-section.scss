@@ -13,7 +13,7 @@
     width: 0px;
     height: 0px;
     transition: 0.4s;
-    animation: 1.4s aboutmeSlide;
+    animation: 1.9s aboutmeSlide;
     animation-fill-mode: forwards;
     overflow: hidden;
 
@@ -24,8 +24,9 @@
       }
 
       100% {
-        width: 1200px;
-        height: 400px;
+        width: 100%;
+        max-width: 1100px;
+        height: 500px;
       }
     }
   }
@@ -55,16 +56,14 @@
   width: 200px;
   align-content: center;
   text-align: center;
-  font-family: sans-serif;
   text-transform: uppercase;
 }
 
 .aboutme-text {
-  width: 980px;
+  width: 880px;
   align-content: center;
   text-align: justify;
   font-size: 20px;
-  font-family: sans-serif;
-
   padding: 0px 10px;
+  margin-top: 10px;
 }

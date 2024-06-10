@@ -71,13 +71,15 @@
   width: 500px;
   border-radius: 10px;
   margin-bottom: 10px;
+  padding-left: 15px;
 }
 
 textarea {
   height: 300px;
   width: 500px;
   border-radius: 25px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   resize: none;
   overflow: hidden;
 }
