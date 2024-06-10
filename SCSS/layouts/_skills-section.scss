@@ -2,6 +2,7 @@
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
+  font-size: 18px;
 
   &.disabled {
     display: none;
@@ -45,15 +46,20 @@
   }
 
   //Text
+  &__skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
 
-  &__skill-list {
+  &__skills-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 420px;
   }
 
-  &__skill-type {
+  &__skills-type {
     display: flex;
     gap: 5px;
     justify-content: right;
@@ -82,7 +88,7 @@
         }
 
         100% {
-          width: 50%;
+          width: 95%;
         }
       }
     }
@@ -140,6 +146,25 @@
 
         100% {
           width: 90%;
+        }
+      }
+    }
+
+    &__self-education {
+      height: 3px;
+      border-radius: 25px;
+      animation: 1.5s slideAdaptivity;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      background: #404cf7;
+
+      @keyframes slideAdaptivity {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 95%;
         }
       }
     }

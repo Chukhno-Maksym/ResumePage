@@ -9,6 +9,7 @@ body {
   background: linear-gradient(45deg, white 85%, #404cf7 85.1%);
   height: 100vh;
   overflow: hidden;
+  font-size: 18px;
 }
 
 p {
@@ -20,7 +21,27 @@ p {
   margin-top: 15px;
 }
 
-.greetings {
+h1 {
   text-align: center;
   font-size: 48px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-top: 5px;
+  list-style-type: none;
 }

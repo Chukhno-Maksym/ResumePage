@@ -9,6 +9,7 @@ body {
   background: linear-gradient(45deg, white 85%, #404cf7 85.1%);
   height: 100vh;
   overflow: hidden;
+  font-size: 18px;
 }
 
 p {
@@ -20,9 +21,29 @@ p {
   margin-top: 15px;
 }
 
-.greetings {
+h1 {
   text-align: center;
   font-size: 48px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-top: 5px;
+  list-style-type: none;
 }
 
 .aboutme-section {
@@ -103,7 +124,6 @@ p {
   height: 0px;
   animation: 1.4s contactsSlide;
   animation-fill-mode: forwards;
-  border: 1px solid black;
 }
 @keyframes contactsSlide {
   0% {
@@ -131,6 +151,38 @@ p {
     width: 0px;
     height: 0px;
   }
+}
+.contacts-section__contact-type {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.contacts-section__input {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-section__social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.input__control {
+  height: 30px;
+  width: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 300px;
+  width: 500px;
+  border-radius: 25px;
+  padding: 15px;
+  resize: none;
+  overflow: hidden;
 }
 
 .portfolio-section {
@@ -180,6 +232,7 @@ p {
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
+  font-size: 18px;
 }
 .skills-section.disabled {
   display: none;
@@ -217,13 +270,18 @@ p {
     height: 0px;
   }
 }
-.skills-section__skill-list {
+.skills-section__skills-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.skills-section__skills-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   width: 420px;
 }
-.skills-section__skill-type {
+.skills-section__skills-type {
   display: flex;
   gap: 5px;
   justify-content: right;
@@ -249,7 +307,7 @@ p {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 95%;
   }
 }
 .skills-section__animation-container__animation-communication {
@@ -298,6 +356,22 @@ p {
   }
   100% {
     width: 90%;
+  }
+}
+.skills-section__animation-container__self-education {
+  height: 3px;
+  border-radius: 25px;
+  animation: 1.5s slideAdaptivity;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  background: #404cf7;
+}
+@keyframes slideAdaptivity {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
   }
 }
 .skills-section__animation-container__animation-hmtl {

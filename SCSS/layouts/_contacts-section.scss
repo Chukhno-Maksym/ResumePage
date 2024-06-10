@@ -13,7 +13,7 @@
     animation: 1.4s contactsSlide;
     // animation-delay: 1.5s;
     animation-fill-mode: forwards;
-    border: 1px solid black;
+    // border: 1px solid black;
 
     @keyframes contactsSlide {
       0% {
@@ -45,4 +45,39 @@
       }
     }
   }
+
+  &__contact-type {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+
+  &__input {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.input__control {
+  height: 30px;
+  width: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 300px;
+  width: 500px;
+  border-radius: 25px;
+  padding: 15px;
+  resize: none;
+  overflow: hidden;
 }
