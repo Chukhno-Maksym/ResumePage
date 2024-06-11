@@ -13,12 +13,10 @@ const contactsSection = document.querySelector(".contacts-section");
 const toggleSection = (button, section) => {
   const isActive = button.classList.contains("active");
 
-  // Проверяем, если текущая секция и кнопка активны, выходим из функции
   if (isActive && section.classList.contains("active")) {
     return;
   }
 
-  // Отключаем активную секцию и кнопку
   const activeButton = document.querySelector(".button.active");
   const activeSection = document.querySelector(
     ".aboutme-section.active, .skills-section.active, .portfolio-section.active, .contacts-section.active"
@@ -34,7 +32,6 @@ const toggleSection = (button, section) => {
     }, 1400);
   }
 
-  // Включаем текущую секцию и кнопку
   button.classList.toggle("active");
   button.classList.toggle("disabled");
 
