@@ -128,7 +128,7 @@ ul {
     100% {
       width: 100%;
       max-width: 700px;
-      height: 550px;
+      height: 650px;
     }
   }
 }
@@ -207,13 +207,13 @@ ul {
 @media screen and (min-width: 767px) {
   .aboutme-section.inactive {
     width: 700px;
-    height: 550px;
+    height: 650px;
   }
   @keyframes aboutmeClose {
     0% {
       width: 100%;
       max-width: 700px;
-      height: 550px;
+      height: 650px;
     }
     100% {
       width: 0px;
@@ -1007,7 +1007,10 @@ ul {
 }
 
 .cv-button {
+  display: inline-block;
+  text-decoration: none;
   margin-top: 20px;
+  align-content: center;
 }
 
 .link {

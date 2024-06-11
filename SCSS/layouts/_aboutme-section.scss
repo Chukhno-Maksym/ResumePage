@@ -55,7 +55,7 @@
         100% {
           width: 100%;
           max-width: 700px;
-          height: 550px;
+          height: 650px;
         }
       }
     }
@@ -137,13 +137,13 @@
 
     @media screen and (min-width: $bp-tablet) {
       width: 700px;
-      height: 550px;
+      height: 650px;
 
       @keyframes aboutmeClose {
         0% {
           width: 100%;
           max-width: 700px;
-          height: 550px;
+          height: 650px;
         }
         100% {
           width: 0px;
