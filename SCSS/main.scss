@@ -1,7 +1,13 @@
+@import "./Utils/fonts";
+@import "./Utils/mixins";
+@import "./Utils/variables";
+
 @import "./base";
 @import "./layouts/aboutme-section";
 @import "./layouts/contacts-section";
 @import "./layouts/potfolio-section";
 @import "./layouts/skills-section";
 
+@import "./components/animations";
 @import "./components/buttons";
+@import "./components/links";

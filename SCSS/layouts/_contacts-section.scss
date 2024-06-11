@@ -1,6 +1,5 @@
 .contacts-section {
   margin: 0 auto;
-  border-radius: 15px;
   overflow: hidden;
 
   &.disabled {
@@ -11,37 +10,139 @@
     width: 0px;
     height: 0px;
     animation: 1.4s contactsSlide;
-    // animation-delay: 1.5s;
     animation-fill-mode: forwards;
-    // border: 1px solid black;
 
-    @keyframes contactsSlide {
-      0% {
-        width: 0px;
-        height: 0px;
+    @media screen and (min-width: $bp-mobileS) {
+      @keyframes contactsSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 340px;
+          height: 680px;
+        }
       }
+    }
 
-      100% {
-        width: 1200px;
-        height: 600px;
+    @media screen and (min-width: $bp-mobile) {
+      @keyframes contactsSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 400px;
+          height: 700px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      @keyframes contactsSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 700px;
+          height: 670px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      @keyframes contactsSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 1200px;
+          height: 600px;
+        }
       }
     }
   }
+
   &.inactive {
-    width: 500px;
-    height: 400px;
     animation: 1.4s contactsClose;
     animation-fill-mode: forwards;
     overflow: hidden;
 
-    @keyframes contactsClose {
-      0% {
-        width: 1200px;
-        height: 600px;
+    @media screen and (min-width: $bp-mobileS) {
+      width: 340px;
+      height: 1100px;
+
+      @keyframes contactsClose {
+        0% {
+          width: 100%;
+          max-width: 340px;
+          height: 1100px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
-      100% {
-        width: 0px;
-        height: 0px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 400px;
+      height: 700px;
+
+      @keyframes contactsClose {
+        0% {
+          width: 100%;
+          max-width: 400px;
+          height: 700px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 700px;
+      height: 670px;
+
+      @keyframes contactsClose {
+        0% {
+          width: 100%;
+          max-width: 700px;
+          height: 670px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 700px;
+      height: 670px;
+
+      @keyframes contactsClose {
+        0% {
+          width: 100%;
+          max-width: 1200px;
+          height: 600px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
     }
   }
@@ -50,6 +151,27 @@
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
+
+    @media screen and (min-width: $bp-mobileS) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__adress {
+    margin-top: 15px;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-self: baseline;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
   }
 
   &__input {
@@ -64,22 +186,44 @@
     justify-content: center;
     margin-top: 10px;
   }
-}
 
-.input__control {
-  height: 30px;
-  width: 500px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-}
+  &__input-control {
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
 
-textarea {
-  height: 300px;
-  width: 500px;
-  border-radius: 25px;
-  padding-top: 15px;
-  padding-left: 15px;
-  resize: none;
-  overflow: hidden;
+    @media screen and (min-width: $bp-mobileS) {
+      width: 300px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 400px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 500px;
+    }
+  }
+
+  &__input-massage {
+    height: 300px;
+    border-radius: 25px;
+    padding-top: 15px;
+    padding-left: 15px;
+    resize: none;
+    overflow: hidden;
+
+    @media screen and (min-width: $bp-mobileS) {
+      width: 300px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 400px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 500px;
+    }
+  }
 }

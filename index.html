@@ -35,16 +35,13 @@
     <link rel="stylesheet" href="./CSS/main.css" />
   </head>
   <body>
-    <h1>Maksym Chukhno</h1>
+    <h1 id="name">Maksym Chukhno</h1>
     <section class="aboutme-section disabled">
-      <div class="aboutme-title">
-        <h2>
-          About
-          <p>me</p>
-        </h2>
+      <div class="aboutme-section__title">
+        <h2>About me</h2>
       </div>
-      <div class="aboutme-text">
-        <p>
+      <div>
+        <p class="aboutme-section__text">
           I am an experienced manager with expertise in personnel management,
           organizing retail processes, and ensuring a high level of customer
           service. I am currently seeking a significant career change and aiming
@@ -53,14 +50,14 @@
           capacity will help me successfully master a new profession in the IT
           sector.
         </p>
-        <p class="margin-top">
+        <p class="aboutme-section__text">
           My goal is to apply my management skills and new technical knowledge
           to solve complex problems and implement innovative projects. I am
           looking for an opportunity to work in a company where I can continue
           my professional development, gain valuable experience in the IT field,
           and contribute to the advancement of modern technologies.
         </p>
-        <p class="margin-top">
+        <p class="aboutme-section__text">
           In my free time, I enjoy reading, walking, and spending time with
           friends. These activities help me maintain a balance between work and
           personal life, as well as foster creative thinking and interpersonal
@@ -76,45 +73,35 @@
           <li class="skills-section__skills-type">
             <p>Organizational Skills:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-stress"
-              ></div>
+              <div class="animation-organization"></div>
             </div>
             <p>95%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Communication:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-communication"
-              ></div>
+              <div class="animation-communication"></div>
             </div>
             <p>99%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Leadership:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-leadership"
-              ></div>
+              <div class="animation-leadership"></div>
             </div>
             <p>75%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Adaptability:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-adaptivity"
-              ></div>
+              <div class="animation-adaptivity"></div>
             </div>
             <p>90%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Self education:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__self-education"
-              ></div>
+              <div class="animation-education"></div>
             </div>
             <p>95%</p>
           </li>
@@ -124,72 +111,56 @@
           <li class="skills-section__skills-type">
             <p>HTML:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-hmtl"
-              ></div>
+              <div class="animation-hmtl"></div>
             </div>
             <p>80%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>CSS:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-css"
-              ></div>
+              <div class="animation-css"></div>
             </div>
             <p>80%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>SCSS:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-scss"
-              ></div>
+              <div class="animation-scss"></div>
             </div>
             <p>75%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Adaptive layout:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__adaptive-layout"
-              ></div>
+              <div class="animation-adaptiveLayout"></div>
             </div>
             <p>95%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>JavaScript:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-js"
-              ></div>
+              <div class="animation-js"></div>
             </div>
             <p>60%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>Webpack:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-webpack"
-              ></div>
+              <div class="animation-webpack"></div>
             </div>
             <p>40%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>NodeJS:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-nodejs"
-              ></div>
+              <div class="animation-nodejs"></div>
             </div>
             <p>40%</p>
           </li>
           <li class="skills-section__skills-type">
             <p>React:</p>
             <div class="skills-section__animation-container">
-              <div
-                class="skills-section__animation-container__animation-react"
-              ></div>
+              <div class="animation-react"></div>
             </div>
             <p>30%</p>
           </li>
@@ -203,12 +174,9 @@
       <h2>Let's get in touch</h2>
       <div class="contacts-section__contact-type">
         <div class="contacts-section__adress">
-          <ul class="contacts-section__adress-list">
+          <ul class="contacts-section__list">
             <li>
-              <a
-                class="contacts-section__address-link"
-                href="tel:+380636902581"
-              >
+              <a class="contacts-section__link link" href="tel:+380636902581">
                 <svg width="16" height="16">
                   <use href="./Images/icons.svg#icon-phone"></use>
                 </svg>
@@ -217,7 +185,7 @@
             </li>
             <li>
               <a
-                class="contacts-section__address-link"
+                class="contacts-section__link link"
                 href="mailto:chukhno.maksym@gmail.com"
               >
                 <svg width="16" height="16">
@@ -234,42 +202,53 @@
             </li>
           </ul>
           <div class="contacts-section__social">
-            <svg width="24" height="24">
-              <use href="./Images/icons.svg#icon-telegram"></use>
-            </svg>
-            <svg width="24" height="24">
-              <use href="./Images/icons.svg#icon-facebook"></use>
-            </svg>
-            <svg width="24" height="24">
-              <use href="./Images/icons.svg#icon-linkedin"></use>
-            </svg>
+            <a href="https://t.me/chukhno_maksym" class="link" target="_blank">
+              <svg width="24" height="24">
+                <use href="./Images/icons.svg#icon-telegram"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maksym-chukhno/"
+              class="link"
+              target="_blank"
+            >
+              <svg width="24" height="24">
+                <use href="./Images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/maxim.chukhno"
+              class="link"
+              target="_blank"
+            >
+              <svg width="24" height="24">
+                <use href="./Images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="contacts-section__input">
           <form name="contact-form" id="contact-form" autocomplete="off">
-            <div class="contact-section__form-field input">
-              <!-- <label>Name</label> -->
+            <div class="contacts-section__form-field">
               <input
-                class="input__control"
+                class="contacts-section__input-control"
                 type="text"
                 placeholder="Name"
                 name="user_name"
               />
             </div>
-            <div class="contact-section__form-field input">
-              <!-- <label>Email</label> -->
+            <div class="contacts-section__form-field">
               <input
-                class="input__control"
+                class="contacts-section__input-control"
                 type="email"
                 placeholder="Enter your E-mail"
                 name="user_email"
                 required
               />
             </div>
-            <div class="contact-section__form-field input">
-              <!-- <label>Message</label> -->
+            <div class="contacts-section__form-field">
               <textarea
-                class="input__massage"
+                class="contacts-section__input-massage"
                 type="text"
                 placeholder="Massage"
                 maxlength="1100"
@@ -298,5 +277,6 @@
     </div>
 
     <script src="./JS/aboutme-button.js"></script>
+    <script src="./JS/anchour_button.js"></script>
   </body>
 </html>

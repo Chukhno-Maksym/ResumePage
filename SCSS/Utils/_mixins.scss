@@ -1,0 +1,8 @@
+@mixin animationMixin($animation-name) {
+  height: 3px;
+  border-radius: 25px;
+  animation-direction: alternate;
+  animation: linear 1.4s $animation-name;
+  animation-fill-mode: forwards;
+  background: var(--color-primary-dark);
+}

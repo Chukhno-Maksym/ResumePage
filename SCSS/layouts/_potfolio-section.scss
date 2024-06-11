@@ -11,9 +11,7 @@
     width: 0px;
     height: 0px;
     animation: 1.4s portfolioSlide;
-    // animation-delay: 1.5s;
     animation-fill-mode: forwards;
-    // border: 1px solid black;
 
     @keyframes portfolioSlide {
       0% {
@@ -22,7 +20,8 @@
       }
 
       100% {
-        width: 500px;
+        width: 100%;
+        max-width: 1100px;
         height: 400px;
       }
     }
@@ -36,7 +35,8 @@
 
     @keyframes portfolioClose {
       0% {
-        width: 500px;
+        width: 100%;
+        max-width: 1100px;
         height: 400px;
       }
       100% {

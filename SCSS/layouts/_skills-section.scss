@@ -1,46 +1,152 @@
 .skills-section {
   margin: 0 auto;
-  border-radius: 15px;
   overflow: hidden;
-  font-size: 18px;
 
   &.disabled {
     display: none;
   }
 
   &.active {
-    width: 0px;
-    height: 0px;
-    animation: 1.4s skillSlide;
+    animation: linear 1.4s skillSlide;
     animation-fill-mode: forwards;
 
-    @keyframes skillSlide {
-      0% {
-        width: 0px;
-        height: 0px;
-      }
+    @media screen and (min-width: $bp-mobileS) {
+      @keyframes skillSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
 
-      100% {
-        width: 1200px;
-        height: 400px;
+        100% {
+          width: 100%;
+          max-width: 340px;
+          height: 1100px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      @keyframes skillSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 400px;
+          height: 1100px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      @keyframes skillSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 700px;
+          height: 350px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      @keyframes skillSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 1000px;
+          height: 350px;
+        }
       }
     }
   }
+
   &.inactive {
-    width: 500px;
-    height: 400px;
-    animation: 1.4s skillClose;
+    animation: linear 1.4s skillClose;
     animation-fill-mode: forwards;
     overflow: hidden;
 
-    @keyframes skillClose {
-      0% {
-        width: 1200px;
-        height: 400px;
+    @media screen and (min-width: $bp-mobileS) {
+      width: 1100px;
+      height: 40340px;
+
+      @keyframes skillClose {
+        0% {
+          width: 100%;
+          max-width: 1100px;
+          height: 340px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
-      100% {
-        width: 0px;
-        height: 0px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 1100px;
+      height: 400px;
+
+      @keyframes skillClose {
+        0% {
+          width: 100%;
+          max-width: 1100px;
+          height: 400px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 700px;
+      height: 350px;
+      animation: linear 1.4s skillClose;
+      animation-fill-mode: forwards;
+      overflow: hidden;
+
+      @keyframes skillClose {
+        0% {
+          width: 100%;
+          max-width: 700px;
+          height: 350px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 1000px;
+      height: 350px;
+      animation: linear 1.4s skillClose;
+      animation-fill-mode: forwards;
+      overflow: hidden;
+
+      @keyframes skillClose {
+        0% {
+          width: 100%;
+          max-width: 1000px;
+          height: 350px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
     }
   }
@@ -50,6 +156,15 @@
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
+
+    @media screen and (min-width: $bp-mobileS) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__skills-list {
@@ -57,6 +172,14 @@
     padding: 0;
     margin: 0;
     width: 420px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 300px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 450px;
+    }
   }
 
   &__skills-type {
@@ -64,262 +187,78 @@
     gap: 5px;
     justify-content: right;
     align-items: center;
+    margin-top: 5px;
+    list-style-type: none;
+
+    @media screen and (min-width: $bp-mobileS) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__animation-container {
     width: 200px;
     height: 7px;
-    border: 2px solid #404cf7;
-    animation-delay: 1.9s;
+    border: 2px solid var(--color-primary-dark);
     border-radius: 25px;
+  }
 
-    // Soft Skills
-    &__animation-stress {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.4s slideStress;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
+  //Soft skills
 
-      @keyframes slideStress {
-        0% {
-          width: 0;
-        }
+  .animation-organization {
+    @include animationMixin(slideOrganization);
+  }
 
-        100% {
-          width: 95%;
-        }
-      }
-    }
+  .animation-communication {
+    @include animationMixin(slideCommunication);
+  }
 
-    &__animation-communication {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.4s slideCommunication;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
+  .animation-leadership {
+    @include animationMixin(slideLeadership);
+  }
 
-      @keyframes slideCommunication {
-        0% {
-          width: 0;
-        }
+  .animation-adaptivity {
+    @include animationMixin(slideAdaptivity);
+  }
 
-        100% {
-          width: 99%;
-        }
-      }
-    }
+  .animation-education {
+    @include animationMixin(slideEducation);
+  }
 
-    &__animation-leadership {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideLeadership;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
+  //Hard skills
 
-      @keyframes slideLeadership {
-        0% {
-          width: 0;
-        }
+  .animation-hmtl {
+    @include animationMixin(slideHmtl);
+  }
 
-        100% {
-          width: 75%;
-        }
-      }
-    }
+  .animation-css {
+    @include animationMixin(slideCss);
+  }
 
-    &__animation-adaptivity {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideAdaptivity;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
+  .animation-scss {
+    @include animationMixin(slideScss);
+  }
 
-      @keyframes slideAdaptivity {
-        0% {
-          width: 0;
-        }
+  .animation-adaptiveLayout {
+    @include animationMixin(slideAdaptiv);
+  }
 
-        100% {
-          width: 90%;
-        }
-      }
-    }
+  .animation-js {
+    @include animationMixin(slideJs);
+  }
 
-    &__self-education {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideAdaptivity;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
+  .animation-webpack {
+    @include animationMixin(slideWebpack);
+  }
 
-      @keyframes slideAdaptivity {
-        0% {
-          width: 0;
-        }
+  .animation-nodejs {
+    @include animationMixin(slideNodejs);
+  }
 
-        100% {
-          width: 95%;
-        }
-      }
-    }
-
-    // Hard Skills
-    &__animation-hmtl {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideHmtl;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideHmtl {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 80%;
-        }
-      }
-    }
-
-    &__animation-css {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideCss;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideCss {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 80%;
-        }
-      }
-    }
-
-    &__animation-scss {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideScss;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideScss {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 75%;
-        }
-      }
-    }
-
-    &__adaptive-layout {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideAdaptiv;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideAdaptiv {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 95%;
-        }
-      }
-    }
-
-    &__animation-js {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideJs;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideJs {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 60%;
-        }
-      }
-    }
-
-    &__animation-webpack {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideWebpack;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideWebpack {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 40%;
-        }
-      }
-    }
-
-    &__animation-nodejs {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideNodejs;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideNodejs {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 40%;
-        }
-      }
-    }
-
-    &__animation-react {
-      height: 3px;
-      border-radius: 25px;
-      animation: 1.5s slideReact;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      background: #404cf7;
-
-      @keyframes slideReact {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 30%;
-        }
-      }
-    }
+  .animation-react {
+    @include animationMixin(slideReact);
   }
 }

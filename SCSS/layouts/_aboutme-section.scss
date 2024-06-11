@@ -1,7 +1,5 @@
 .aboutme-section {
   margin: 0 auto;
-  border-radius: 15px;
-  background: white;
 
   &.disabled {
     display: none;
@@ -10,60 +8,217 @@
   &.active {
     display: flex;
     gap: 5px;
-    width: 0px;
-    height: 0px;
     transition: 0.4s;
-    animation: 1.9s aboutmeSlide;
+    animation: linear 1.4s aboutmeSlide;
     animation-fill-mode: forwards;
     overflow: hidden;
 
-    @keyframes aboutmeSlide {
-      0% {
-        width: 0px;
-        height: 0px;
-      }
+    @media screen and (min-width: $bp-mobileS) {
+      flex-direction: column;
 
-      100% {
-        width: 100%;
-        max-width: 1100px;
-        height: 500px;
+      @keyframes aboutmeSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 340px;
+          height: 1100px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      @keyframes aboutmeSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 400px;
+          height: 1000px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      @keyframes aboutmeSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 700px;
+          height: 550px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+
+      @keyframes aboutmeSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 900px;
+          height: 550px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-laptop) {
+      justify-content: center;
+      align-items: center;
+
+      @keyframes aboutmeSlide {
+        0% {
+          width: 0px;
+          height: 0px;
+        }
+
+        100% {
+          width: 100%;
+          max-width: 1200px;
+          height: 700px;
+        }
       }
     }
   }
+
   &.inactive {
-    display: flex;
-    gap: 5px;
-    width: 1200px;
-    height: 400px;
-    animation: 1.4s aboutmeClose;
+    animation: linear 1.4s aboutmeClose;
     animation-fill-mode: forwards;
     overflow: hidden;
 
-    @keyframes aboutmeClose {
-      0% {
-        width: 1200px;
-        height: 400px;
+    @media screen and (min-width: $bp-mobileS) {
+      width: 340px;
+      height: 1100px;
+
+      @keyframes aboutmeClose {
+        0% {
+          width: 100%;
+          max-width: 340px;
+          height: 1100px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
-      100% {
-        width: 0px;
-        height: 0px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 400px;
+      height: 1000px;
+
+      @keyframes aboutmeClose {
+        0% {
+          width: 100%;
+          max-width: 400px;
+          height: 1000px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 700px;
+      height: 550px;
+
+      @keyframes aboutmeClose {
+        0% {
+          width: 100%;
+          max-width: 700px;
+          height: 550px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      width: 900px;
+      height: 550px;
+
+      @keyframes aboutmeClose {
+        0% {
+          width: 100%;
+          max-width: 900px;
+          height: 550px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $bp-laptop) {
+      flex-direction: row;
+      width: 1200px;
+      height: 700px;
+
+      @keyframes aboutmeClose {
+        0% {
+          width: 100%;
+          max-width: 1200px;
+          height: 700px;
+        }
+        100% {
+          width: 0px;
+          height: 0px;
+        }
       }
     }
   }
-}
 
-.aboutme-title {
-  width: 200px;
-  align-content: center;
-  text-align: center;
-  text-transform: uppercase;
-}
+  &__title {
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
 
-.aboutme-text {
-  width: 880px;
-  align-content: center;
-  text-align: justify;
-  font-size: 20px;
-  padding: 0px 10px;
-  margin-top: 10px;
+    @media screen and (min-width: $bp-desktop) {
+      width: 150px;
+    }
+  }
+
+  &__text {
+    align-content: center;
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 15px;
+
+    @media screen and (min-width: $bp-mobileS) {
+      width: 340px;
+    }
+
+    @media screen and (min-width: $bp-mobile) {
+      width: 400px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 700px;
+    }
+
+    @media screen and (min-width: $bp-laptop) {
+      width: 1000px;
+    }
+  }
 }
