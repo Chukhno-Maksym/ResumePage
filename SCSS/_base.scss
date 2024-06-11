@@ -6,17 +6,20 @@ body {
   padding: 0;
   margin: 0 auto;
   align-content: center;
-
+  height: 100vh;
   font-size: 18px;
   font-family: Manrope, sans-serif;
   line-height: 1.5;
 
-  @media screen and (min-width: $bp-mobileS) {
-    margin-bottom: 10px;
-  }
+  // @media screen and (min-width: $bp-mobileS) {
+  //   height: 1400px;
+  // }
+
+  // @media screen and (min-width: $bp-mobile) {
+  //   height: 1300px;
+  // }
 
   @media screen and (min-width: $bp-desktop) {
-    height: 100vh;
     background: linear-gradient(
       45deg,
       var(--color-primary-light) 85%,
