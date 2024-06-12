@@ -922,7 +922,7 @@ ul {
     width: 0;
   }
   100% {
-    width: 75%;
+    width: 65%;
   }
 }
 @keyframes slideAdaptiv {
@@ -930,7 +930,7 @@ ul {
     width: 0;
   }
   100% {
-    width: 95%;
+    width: 75%;
   }
 }
 @keyframes slideJs {
@@ -938,7 +938,7 @@ ul {
     width: 0;
   }
   100% {
-    width: 60%;
+    width: 30%;
   }
 }
 @keyframes slideWebpack {
